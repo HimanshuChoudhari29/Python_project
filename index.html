@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timekeeper Chronicles - Python Adventure Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #00d4ff;
+        }
+        
+        h1 {
+            font-size: 3em;
+            background: linear-gradient(45deg, #00d4ff, #0088cc);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 10px rgba(0, 212, 255, 0.3);
+        }
+        
+        .tagline {
+            font-size: 1.2em;
+            color: #a3d9ff;
+            margin-bottom: 30px;
+        }
+        
+        .game-info {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border-left: 5px solid #00d4ff;
+        }
+        
+        h2 {
+            color: #00d4ff;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .feature-card h3 {
+            color: #00ffaa;
+            margin-bottom: 10px;
+        }
+        
+        .download-section {
+            text-align: center;
+            margin: 40px 0;
+            padding: 30px;
+            background: rgba(0, 132, 255, 0.1);
+            border-radius: 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #00d4ff, #0099ff);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin: 10px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
+        }
+        
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 212, 255, 0.6);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(45deg, #666, #888);
+        }
+        
+        .code-block {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            color: #aaa;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #00ffaa;
+        }
+        
+        .stat-label {
+            font-size: 0.9em;
+            color: #a3d9ff;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⏳ Timekeeper Chronicles</h1>
+            <p class="tagline">A Python Text Adventure Game with Multiple Chapters & Endings</p>
+        </header>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">3</div>
+                <div class="stat-label">Chapters</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">6</div>
+                <div class="stat-label">Endings</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Python</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">4</div>
+                <div class="stat-label">Stats System</div>
+            </div>
+        </div>
+        
+        <div class="game-info">
+            <h2>🎮 About the Game</h2>
+            <p>You are the last Timekeeper, awakened to restore balance to the Chrono-Core. Journey through three epic chapters, make meaningful choices, and discover one of six possible endings based on your decisions.</p>
+            <p>Perfect for Python projects and presentations, featuring professional console interface, character stats system, and immersive storytelling.</p>
+        </div>
+        
+        <h2>✨ Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>📖 Epic Story</h3>
+                <p>Three complete chapters with professional scene banners and immersive storytelling.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🎯 Multiple Endings</h3>
+                <p>6 different endings based on your choices throughout the game.</p>
+            </div>
+            <div class="feature-card">
+                <h3>⚡ Character Stats</h3>
+                <p>Health, Knowledge, Courage, and Compassion stats affect gameplay and endings.</p>
+            </div>
+            <div class="feature-card">
+                <h3>💾 Inventory System</h3>
+                <p>Collect items, solve puzzles, and use tools to progress through the adventure.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🎨 Professional UI</h3>
+                <p>Beautiful console interface with typing effects and scene banners.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🔁 Replayable</h3>
+                <p>Different choices lead to different outcomes - play multiple times!</p>
+            </div>
+        </div>
+        
+        <div class="download-section">
+            <h2>🚀 Get Started</h2>
+            <p>Download and run the game directly on your computer.</p>
+            
+            <div class="code-block">
+                # Clone and run the game<br>
+                git clone https://github.com/YOUR_USERNAME/timekeeper-chronicles.git<br>
+                cd timekeeper-chronicles<br>
+                python timekeeper_chronicles.py
+            </div>
+            
+            <a href="https://github.com/YOUR_USERNAME/timekeeper-chronicles/archive/refs/heads/main.zip" class="btn">📥 Download ZIP</a>
+            <a href="https://github.com/YOUR_USERNAME/timekeeper-chronicles" class="btn btn-secondary">⭐ View on GitHub</a>
+        </div>
+        
+        <div class="game-info">
+            <h2>🎮 How to Play</h2>
+            <p><strong>1. Download the game</strong> from the link above</p>
+            <p><strong>2. Extract the ZIP file</strong> to any folder</p>
+            <p><strong>3. Open terminal/command prompt</strong> in that folder</p>
+            <p><strong>4. Run:</strong> <code>python timekeeper_chronicles.py</code></p>
+            <p><strong>5. Follow on-screen instructions</strong> - Type numbers to make choices</p>
+        </div>
+        
+        <footer>
+            <p>Created with ❤️ for Python Project Presentation</p>
+            <p>© 2024 Timekeeper Chronicles | Python Text Adventure Game</p>
+            <p style="margin-top: 10px; font-size: 0.9em; color: #888;">
+                Replace YOUR_USERNAME in links with your actual GitHub username
+            </p>
+        </footer>
+    </div>
+    
+    <script>
+        // Simple animation for stats
+        document.addEventListener('DOMContentLoaded', function() {
+            const stats = document.querySelectorAll('.stat-number');
+            stats.forEach(stat => {
+                const finalValue = parseInt(stat.textContent);
+                let current = 0;
+                const increment = finalValue / 20;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= finalValue) {
+                        current = finalValue;
+                        clearInterval(timer);
+                    }
+                    stat.textContent = Math.floor(current);
+                }, 50);
+            });
+            
+            // Update download links with actual username
+            const path = window.location.pathname.split('/')[1];
+            if (path) {
+                const username = path;
+                const downloadBtn = document.querySelector('.btn[href*="YOUR_USERNAME"]');
+                const githubBtn = document.querySelector('.btn-secondary[href*="YOUR_USERNAME"]');
+                
+                if (downloadBtn) {
+                    downloadBtn.href = downloadBtn.href.replace('YOUR_USERNAME', username);
+                }
+                if (githubBtn) {
+                    githubBtn.href = githubBtn.href.replace('YOUR_USERNAME', username);
+                }
+                
+                // Update code block
+                const codeBlock = document.querySelector('.code-block');
+                if (codeBlock) {
+                    codeBlock.innerHTML = codeBlock.innerHTML.replace(/YOUR_USERNAME/g, username);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
