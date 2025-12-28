@@ -246,13 +246,13 @@
             
             <div class="code-block">
                 # Clone and run the game<br>
-                git clone https://github.com/YOUR_USERNAME/timekeeper-chronicles.git<br>
-                cd timekeeper-chronicles<br>
-                python timekeeper_chronicles.py
+                git clone https://github.com/HimanshuChoudhari29/adventure.git<br>
+                cd adventure<br>
+                python adventure.py
             </div>
             
-            <a href="https://github.com/YOUR_USERNAME/timekeeper-chronicles/archive/refs/heads/main.zip" class="btn">📥 Download ZIP</a>
-            <a href="https://github.com/YOUR_USERNAME/timekeeper-chronicles" class="btn btn-secondary">⭐ View on GitHub</a>
+            <a href="https://github.com/HimanshuChoudhari29/adventure/archive/refs/heads/main.zip" class="btn">📥 Download ZIP</a>
+            <a href="https://github.com/HimanshuChoudhari29/adventure" class="btn btn-secondary">⭐ View on GitHub</a>
         </div>
         
         <div class="game-info">
@@ -260,13 +260,13 @@
             <p><strong>1. Download the game</strong> from the link above</p>
             <p><strong>2. Extract the ZIP file</strong> to any folder</p>
             <p><strong>3. Open terminal/command prompt</strong> in that folder</p>
-            <p><strong>4. Run:</strong> <code>python timekeeper_chronicles.py</code></p>
+            <p><strong>4. Run:</strong> <code>python adventure.py</code></p>
             <p><strong>5. Follow on-screen instructions</strong> - Type numbers to make choices</p>
         </div>
         
         <footer>
             <p>Created with ❤️ for Python Project Presentation</p>
-            <p>© 2024 Timekeeper Chronicles | Python Text Adventure Game</p>
+            <p>© 2024 Adventure | Python Text Adventure Game</p>
             <p style="margin-top: 10px; font-size: 0.9em; color: #888;">
                 Replace YOUR_USERNAME in links with your actual GitHub username
             </p>
@@ -295,23 +295,24 @@
             const path = window.location.pathname.split('/')[1];
             if (path) {
                 const username = path;
-                const downloadBtn = document.querySelector('.btn[href*="YOUR_USERNAME"]');
-                const githubBtn = document.querySelector('.btn-secondary[href*="YOUR_USERNAME"]');
+                const downloadBtn = document.querySelector('.btn[href*="HimanshuChoudhari29"]');
+                const githubBtn = document.querySelector('.btn-secondary[href*="HimanshuChoudhari29"]');
                 
                 if (downloadBtn) {
-                    downloadBtn.href = downloadBtn.href.replace('YOUR_USERNAME', username);
+                    downloadBtn.href = downloadBtn.href.replace('HimanshuChoudhari29', username);
                 }
                 if (githubBtn) {
-                    githubBtn.href = githubBtn.href.replace('YOUR_USERNAME', username);
+                    githubBtn.href = githubBtn.href.replace('HimanshuChoudhari29', username);
                 }
                 
                 // Update code block
                 const codeBlock = document.querySelector('.code-block');
                 if (codeBlock) {
-                    codeBlock.innerHTML = codeBlock.innerHTML.replace(/YOUR_USERNAME/g, username);
+                    codeBlock.innerHTML = codeBlock.innerHTML.replace(/HimanshuChoudhari29/g, username);
                 }
             }
         });
     </script>
 </body>
+
 </html>
